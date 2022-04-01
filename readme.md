@@ -22,11 +22,11 @@ The line bellow create an alias to run wp inside the container:
 
 ## Step 04: Importing data using the plugin
 
-```wp breweries import```
+```wp breweries import``` (if you created the alias)
 
 or 
 
-```docker compose run --rm wp-cli breweries import```
+```docker compose run --rm wp-cli breweries import``` (if not)
 
 ## TODO: redirect 
 Redirect / site to anywhere else, once it's headless
