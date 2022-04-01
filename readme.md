@@ -21,6 +21,7 @@ The line bellow create an alias to run wp inside the container:
 ```alias wp="docker compose run --rm wp-cli"```
 
 ## Step 04: Importing data using the plugin
+Please wait 2 minutes before run the command bellow in order to ensure everything is running well.
 
 ```wp breweries import``` (if you created the alias)
 
