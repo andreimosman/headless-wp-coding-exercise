@@ -12,7 +12,9 @@ done
 
 >&2 echo "Mysql is up - executing command"
 
-echo "[EXECUTING]"
-sleep 10
+until test -f /var/www/html/wp-config.php; do
+  >&2 echo "[PLEASE WAIT] Wordpress is unavailable - sleeping..."
+  sleep 2
+done
 
 exec $CMD
