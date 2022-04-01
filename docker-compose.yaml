@@ -1,0 +1,58 @@
+version: '3.9'
+services:
+  wp-db:
+    container_name: wp-db
+    image: mysql:latest
+    command: [ "--default-authentication-plugin=mysql_native_password" ]
+    environment:
+      MYSQL_ROOT_PASSWORD: wp-dev
+      MYSQL_DATABASE: wp-dev
+      MYSQL_USER: wp-dev
+      MYSQL_PASSWORD: wp-dev
+    ports:
+      - '3306:3306'
+    volumes:
+      - './data/wp_db:/var/lib/mysql'
+  wp:
+    container_name: wp
+    image: wordpress:latest
+    restart: always
+    depends_on:
+      - wp-db
+    ports:
+      - '80:80'
+    environment:
+      - WORDPRESS_DB_PASSWORD=${MYSQL_PASSWORD}
+      - WORDPRESS_DB_USER=${MYSQL_USER}
+      - WORDPRESS_DB_NAME=${MYSQL_DATABASE}
+      - WORDPRESS_DB_HOST=wp-db
+    volumes:
+      - './data/wp_html:/var/www/html'
+      - './wbl_breweries:/var/www/html/wp-content/plugins/wbl_breweries'
+  wp-cli:
+    container_name: wp-cli
+    image: wordpress:cli
+    profiles:
+      - auto-config 
+    depends_on:
+      - wp
+      - wp-db
+    volumes:
+      - './data/wp_html:/var/www/html'
+      - './wbl_breweries:/var/www/html/wp-content/plugins/wbl_breweries'
+      - './scripts/wait-for-mysql.sh:/wait-for-mysql.sh'
+    command: >
+      /wait-for-mysql.sh
+      wp core install
+      --path="/var/www/html"
+      --url="http://localhost"
+      --title='${WP_TITLE}'
+      --admin_user="${WP_ADMIN_USER}"
+      --admin_password="${WP_ADMIN_PASSWORD}"
+      --admin_email="${WP_ADMIN_EMAIL}"
+      --skip-email
+    environment:
+      - WORDPRESS_DB_PASSWORD=wp-dev
+      - WORDPRESS_DB_USER=wp-dev
+      - WORDPRESS_DB_NAME=wp-dev
+      - WORDPRESS_DB_HOST=wp-db
