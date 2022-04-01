@@ -27,3 +27,6 @@ The line bellow create an alias to run wp inside the container:
 or 
 
 ```docker compose run --rm wp-cli breweries import```
+
+# TODO: redirect 
+Redirect / site to anywhere else, once it's headless
