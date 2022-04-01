@@ -18,5 +18,11 @@ echo Done! Ready to go. Access: http://localhost/wp-admin
 echo "==========================================================="
 
 echo ""
-echo "[WARNING] Please wait 2 minutes before run the importer..."
+echo "Waiting 2 minutes in order to complete installation..."
+echo ""
+
+sleep 120
+
+echo ""
+echo "Now you can run the importer if you want."
 echo ""
