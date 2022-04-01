@@ -6,9 +6,13 @@ PORT=3306
 CMD=$@
 
 until mysql -h $HOST -P $PORT -D $WORDPRESS_DB_NAME -u $WORDPRESS_DB_USER -p$WORDPRESS_DB_PASSWORD -e '\q'; do
-  >&2 echo "Mysql is unavailable - sleeping..."
+  >&2 echo "[PLEASE WAIT] Mysql is unavailable - sleeping..."
   sleep 2
 done
 
 >&2 echo "Mysql is up - executing command"
+
+echo "[EXECUTING]"
+sleep 10
+
 exec $CMD
