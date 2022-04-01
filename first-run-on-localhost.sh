@@ -17,3 +17,6 @@ echo "==========================================================="
 echo Done! Ready to go. Access: http://localhost/wp-admin
 echo "==========================================================="
 
+echo ""
+echo "[WARNING] Please wait 2 minutes before run the importer..."
+echo ""
