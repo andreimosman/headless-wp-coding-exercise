@@ -56,15 +56,15 @@ class Plugin {
                 'title' => 'Brewery Details',
                 'fields' => array(
                     array(
-                        'key' => 'field_brewery_id',
+                        'key' => 'wbl_b_id',
                         'label' => 'Id',
                         'name' => 'brewery_id',
-                        'type' => 'number',
+                        'type' => 'text',
                         'instructions' => '',
                         'required' => 0,
                     ),
                     array(
-                        'key' => 'field_brewery_name',
+                        'key' => 'wbl_b_name',
                         'label' => 'Name',
                         'name' => 'brewery_name',
                         'type' => 'text',
@@ -72,7 +72,7 @@ class Plugin {
                         'required' => 0,
                     ),
                     array(
-                        'key' => 'field_brewery_type',
+                        'key' => 'wbl_b_brewery_type',
                         'label' => 'Type',
                         'name' => 'brewery_type',
                         'type' => 'text',
@@ -80,7 +80,7 @@ class Plugin {
                         'required' => 0,
                     ),
                     array(
-                        'key' => 'field_brewery_street',
+                        'key' => 'wbl_b_street',
                         'label' => 'Street',
                         'name' => 'brewery_street',
                         'type' => 'text',
@@ -88,7 +88,7 @@ class Plugin {
                         'required' => 0,
                     ),
                     array(
-                        'key' => 'field_brewery_address_2',
+                        'key' => 'wbl_b_address_2',
                         'label' => 'Address 2',
                         'name' => 'brewery_address_2',
                         'type' => 'text',
@@ -96,7 +96,7 @@ class Plugin {
                         'required' => 0,
                     ),
                     array(
-                        'key' => 'field_brewery_address_3',
+                        'key' => 'wbl_b_address_3',
                         'label' => 'Address 3',
                         'name' => 'brewery_address_3',
                         'type' => 'text',
@@ -104,7 +104,7 @@ class Plugin {
                         'required' => 0,
                     ),
                     array(
-                        'key' => 'field_brewery_city',
+                        'key' => 'wbl_b_city',
                         'label' => 'City',
                         'name' => 'brewery_city',
                         'type' => 'text',
@@ -112,7 +112,7 @@ class Plugin {
                         'required' => 0,
                     ),
                     array(
-                        'key' => 'field_brewery_state',
+                        'key' => 'wbl_b_state',
                         'label' => 'State',
                         'name' => 'brewery_state',
                         'type' => 'text',
@@ -120,7 +120,7 @@ class Plugin {
                         'required' => 0,
                     ),
                     array(
-                        'key' => 'field_brewery_county_province',
+                        'key' => 'wbl_b_county_province',
                         'label' => 'County/Province',
                         'name' => 'brewery_county_province',
                         'type' => 'text',
@@ -128,7 +128,7 @@ class Plugin {
                         'required' => 0,
                     ),
                     array(
-                        'key' => 'field_brewery_postal_code',
+                        'key' => 'wbl_b_postal_code',
                         'label' => 'Postal Code',
                         'name' => 'brewery_postal_code',
                         'type' => 'text',
@@ -136,7 +136,7 @@ class Plugin {
                         'required' => 0,
                     ),
                     array(
-                        'key' => 'field_brewery_country',
+                        'key' => 'wbl_b_country',
                         'label' => 'Country',
                         'name' => 'brewery_country',
                         'type' => 'text',
@@ -144,7 +144,7 @@ class Plugin {
                         'required' => 0,
                     ),
                     array(
-                        'key' => 'field_brewery_longitude',
+                        'key' => 'wbl_b_longitude',
                         'label' => 'Longitude',
                         'name' => 'brewery_longitude',
                         'type' => 'number',
@@ -152,7 +152,7 @@ class Plugin {
                         'required' => 0,
                     ),
                     array(
-                        'key' => 'field_brewery_latitude',
+                        'key' => 'wbl_b_latitude',
                         'label' => 'Latitude',
                         'name' => 'brewery_latitude',
                         'type' => 'number',
@@ -160,7 +160,7 @@ class Plugin {
                         'required' => 0,
                     ),
                     array(
-                        'key' => 'field_brewery_phone',
+                        'key' => 'wbl_b_phone',
                         'label' => 'Phone',
                         'name' => 'brewery_phone',
                         'type' => 'text',
@@ -168,7 +168,7 @@ class Plugin {
                         'required' => 0,
                     ),
                     array(
-                        'key' => 'field_brewery_website_url',
+                        'key' => 'wbl_b_website_url',
                         'label' => 'Website URL',
                         'name' => 'brewery_website_url',
                         'type' => 'url',
@@ -176,7 +176,7 @@ class Plugin {
                         'required' => 0,
                     ),
                     array(
-                        'key' => 'field_brewery_updated_at',
+                        'key' => 'wbl_b_updated_at',
                         'label' => 'Updated At',
                         'name' => 'brewery_updated_at',
                         'type' => 'date_time_picker',
@@ -184,7 +184,7 @@ class Plugin {
                         'required' => 0,
                     ),
                     array(
-                        'key' => 'field_brewery_created_at',
+                        'key' => 'wbl_b_created_at',
                         'label' => 'Created At',
                         'name' => 'brewery_created_at',
                         'type' => 'date_time_picker',
